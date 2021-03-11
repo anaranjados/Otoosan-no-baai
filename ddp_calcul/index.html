@@ -1,0 +1,90 @@
+<!doctype html>
+<html><head><title>Calc ddp</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8">
+<link href="cuadros.css" type="text/css" rel="stylesheet"></head>
+<body>
+<div class="container">
+<fieldset><legend>Основные</legend>
+<div class="column"><label>Ex-works, €</label><input id="exw" type="number" value="7.25" step="0.01"></div>
+<div class="column">
+	<label class="text-center">скидка, %</label><input id="descuento" type="number">
+</div>
+<div class="column">
+	<label class="text-right">за:</label>
+	<div class="tipo">
+		<input id="por-m2" type="radio" name="ventaPor" checked="">
+		<label for="por-m2"><small>&nbsp;М²</small></label>
+		&emsp;&emsp;&emsp;&emsp;
+		<input id="por-pz" type="radio" name="ventaPor"><label for="por-pz"><small>&nbsp;штуку</small></label>
+	</div>
+</div>
+<div class="column">
+	<label>Поставка</label>
+	<div class="tipo">
+		<input id="regular" type="radio" name="compraRegular" checked="">
+		<label for="regular"><small>&nbsp;Регулярно</small></label>
+		&emsp;
+		<input id="por-pedido" type="radio" name="compraRegular">
+		<label for="por-pedido"><small>&nbsp;под`заказ</small></label>
+	</div>
+</div>
+</fieldset><br>
+<fieldset><legend>УПАКОВКА</legend>
+<div class="column"><label>Штук / упаковке</label><input id="pz-caja" type="number" value="7" pattern="[0-9]{.2}"></div><br>
+<div class="column"><label>Масса упаковки</label><input id="peso-caja" type="number" value="20.2" step="0.01"></div><br>
+<div id="sec-m2">
+	<div class="column"><label>Коробок / паллете</label><input id="cj-pal" type="number" value="36" pattern="[0-9]{.2}"></div><br>
+	<div class="column"><label>М² / упаковке</label><input id="m2-caja" type="number" value="1.4" step="0.01"></div>
+</div>
+</fieldset>
+<br><span>ВИД</span>&nbsp;
+<select>
+<optgroup label="Плитка">
+	<option value="az_mas10">6907239003 [Настенная глазур] __ в/п &gt; 10%"</option>
+	<option value="az_mas05menos10">6907239001 [Напольная глазур] __ в/п 0,5 : 10%</option>
+	<option value="az_menos05">6907219009 [Керамогр/клинкер глазур] __ в/п ≤ 0,5%</option>
+</optgroup>
+<optgroup label="Мозаика">
+	<option value="mos_mas05menos10">6907229001 [Мозаика из керамики] __ в/п 0,5% : 10%</option>
+	<option value="mos_menos05">6907219001 [Мозаика из керамогранита] __ в/п ≤ 0,5%</option>
+	<option value="mos_marmol">6802100000 [Мозаика из камня/мрамора]</option>
+	<option value="mos_vitreous">7016100000 [Мозаика из стекла]</option>
+</optgroup>
+<optgroup label="Бордюры и изделия">
+	<option value="finalizado">6907409009 [Керамические изделия отделочные]</option>
+	<option value="list_inox">7326909807 [Бордюр металлический]</option>
+	<option value="list_alum">7604299000 [Бордюр алюминиевый]</option>
+</optgroup>
+<optgroup label="Раковины">
+	<option value="lavam_piedra">6802991000 [Раковина из камня]</option>
+	<option value="lavam_marmol">6802910000 [Раковина из мрамора]</option>
+	<option value="lavam_madera">6802991000 [Раковина из окаменелого дерева]</option>
+	<option value="lavam_arcilla">6910900000 [Раковина из глины]</option>
+</optgroup>
+<optgroup label="Мебель"></optgroup><optgroup label="Выставочный стенд"></optgroup>
+</select>	<br><br><!-- em>Мозаика : грань меньше 7(см)</em-->
+<br><button>Расчитать цены</button>
+</div>
+
+
+<div id="RESULTADOS" class="container">
+<fieldset><legend>СБЫТ</legend>
+<div class="column">
+	<small>Duties & delivery paid, €</small><output id="ddp" type="number"></output>
+</div><br>
+<fieldset><legend>Розница</legend>
+	<div class="column"><output id="retail-pz"></output>&nbsp;&nbsp;<label>Руб / шт</label></div>
+	<div class="column"><output id="retail-m2"></output>&nbsp;&nbsp;<label>Руб / м²</label></div>
+</fieldset>
+<fieldset><legend>Магазин</legend>
+	<div class="column"><output id="deal-pz"></output>&nbsp;&nbsp;<label>Руб / шт</label></div>
+	<div class="column"><output id="deal-m2"></output>&nbsp;&nbsp;<label>Руб / м²</label></div>
+</fieldset>
+<fieldset><legend>Интернет-магазин</legend>
+	<div class="column"><output id="web-pz"></output>&nbsp;&nbsp;<label>Руб / шт</label></div>
+	<div class="column"><output id="web-m2"></output>&nbsp;&nbsp;<label>Руб / м²</label></div>
+</fieldset>
+</fieldset>
+</div>
+
+<script defer src="calcul.js"></script>
+</body></html>

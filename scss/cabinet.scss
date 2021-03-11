@@ -1,0 +1,268 @@
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.private-sale {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 40px;
+}
+.private-sale__img {
+  float: left;
+  max-width: 515px;
+  width: calc(50% - 35px);
+}
+.private-sale__img img {
+  max-width: 100%;
+  height: auto;
+}
+.private-sale__desc {
+  float: left;
+  width: 50%;
+  padding-left: 35px;
+  font-size: 16px;
+}
+.private-sale__header {
+  padding-top: 0;
+  font-size: 24px;
+}
+.private-links {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 40px;
+}
+.private-links__item,
+.private-links__item:hover {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #e51b24;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.private-user {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+.private-menu {
+  overflow: hidden;
+  clear: both;
+}
+.private-menu__item {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.private-menu__link {
+  display: block;
+  padding: 5px 30px;
+  border: 1px solid #999999;
+  background-color: #F5F5F5;
+  text-decoration: none;
+}
+.private-menu__item_active .private-menu__link,
+.private-menu__link:hover {
+  color: #fff;
+  background-color: #e51b24;
+  border-color: #e51b24;
+  text-decoration: none;
+}
+.tab__headers {
+  margin-bottom: -1px;
+}
+.tab__header {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 30px;
+  border: 1px solid #999999;
+  background-color: #F5F5F5;
+  text-decoration: none;
+}
+.tab__header.active,
+.tab__header:hover {
+  color: #fff;
+  background-color: #e51b24;
+  border-color: #e51b24;
+  text-decoration: none;
+}
+.tab__page {
+  display: none;
+}
+.tab__page.active {
+  display: block;
+}
+.private-sum-debt {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.private-sum-debt_red {
+  color: #e51b24;
+}
+.table-description {
+  border: 1px solid #999999;
+  padding: 20px;
+  margin-bottom: -1px;
+  font-size: 14px;
+  overflow: hidden;
+}
+.table-description__icon {
+  font-size: 16px;
+}
+.table-description__row {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.table-description_p {
+  padding: 10px 20px;
+}
+.table-description .tbutton,
+.table .tbutton,
+.buttons .tbutton,
+.table-description .tbutton:hover,
+.table .tbutton:hover,
+.buttons .tbutton:hover,
+.table-description .tbutton:active,
+.table .tbutton:active,
+.buttons .tbutton:active {
+  color: #fff;
+  background-color: #e51b24;
+  border: 1px solid #e51b24;
+  text-decoration: none;
+  padding: 5px 30px;
+  margin-left: 10px;
+}
+.table-description .tbutton_r,
+.table .tbutton_r,
+.buttons .tbutton_r {
+  float: right;
+}
+.table-description .tbutton_grey,
+.table .tbutton_grey,
+.buttons .tbutton_grey,
+.table-description .tbutton_grey:hover,
+.table .tbutton_grey:hover,
+.buttons .tbutton_grey:hover,
+.table-description .tbutton_grey:active,
+.table .tbutton_grey:active,
+.buttons .tbutton_grey:active {
+  border: 1px solid #999;
+  background-color: #F5F5F5;
+  color: #202020;
+}
+.table {
+  border: 1px solid #999999;
+  width: 100%;
+  table-layout: fixed;
+  background-color: #fff;
+}
+.table__head {
+  background-color: #F5F5F5;
+}
+.table__td {
+  border: 1px solid #999999;
+  padding: 10px;
+  text-align: center;
+}
+.table__td_tr {
+  text-align: right;
+}
+.table__td_tl {
+  text-align: left;
+}
+.table__icon {
+  font-size: 20px;
+}
+.table__icon:hover {
+  text-decoration: none;
+}
+.table__td_center {
+  text-align: center;
+}
+.period {
+  float: left;
+}
+.period .period__input {
+  width: 65px;
+  border: none;
+  color: #e51b24;
+}
+div[data-zw-tab-page='finance'],
+div[data-zw-tab-page='settlements'] {
+  max-width: 950px;
+}
+div[data-zw-tab-page='orders'],
+div[data-zw-tab-page='realizations'],
+div[data-zw-tab-page='returns'] {
+  max-width: 990px;
+}
+.finance__print {
+  width: 45px;
+}
+.settlements__name {
+  width: 305px;
+}
+.returns .returns__select {
+  display: inline-block;
+  max-width: 310px;
+  margin: 0px 10px;
+}
+.orders .orders__doc-number {
+  width: 310px;
+}
+.orders__expand {
+  width: 20px;
+}
+.orders__print {
+  width: 45px;
+}
+.orders__date {
+  width: 100px;
+}
+.orders__num-real {
+  width: 525px;
+}
+.order-detail__border {
+  padding: 5px;
+  background-color: #f5f5f5;
+}
+.order-detail__name {
+  width: 455px;
+}
+.order-detail__name-real {
+  width: 400px;
+}
+.delivery-address {
+  max-width: 760px;
+}
+.delivery-address__edit {
+  max-width: 670px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.new-address {
+  width: 460px;
+}
+.new-address__row {
+  clear: both;
+  float: none;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.new-address__field-name {
+  width: 150px;
+  display: inline-block;
+}
+.new-address__field {
+  display: inline-block;
+  width: 300px;
+}
+.new-address__field select {
+  width: 310px;
+  margin-bottom: 0;
+}

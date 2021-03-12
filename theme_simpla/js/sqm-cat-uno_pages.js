@@ -1,23 +1,21 @@
 $(document).ready(function(){		//  Расчет цены за м2, расчет количества плитки и площади.
 webSettings.set_handler(function() {  
-	// Слайдер в описании коллекции
-	$('.nivoSlider').nivoSlider();
 	$(".price_tab, .prod_price_tab ").each(function(){
-		var good = $(this);
+		let good = $(this);
 		//параметры расчета: цена одной штуки, площадь одной плитки, ширина, высота.
-		var onePiecePrice = parseFloat( $(this).find(".price").html().replace(",",".")),
+		let onePiecePrice = parseFloat( $(this).find(".price").html().replace(",",".")),
 			boxPieceCount = parseInt( $(this).find(".property-box-piece-count").html()), 
 			boxSquere = parseFloat($(this).find(".property-box-squere").html().replace(",",".")), 
 			propertyOnePieceSquere = parseFloat( $(this).find(".property-one-piece-squere").html());
 			
 		//если не задана площадь одной плитки, т.е. не число, то получить параметры ширина и высота.
 		if ( isNaN(propertyOnePieceSquere)){
-			var propertyWidth = parseFloat( $(this).find(".property-width").html() ),  
+			let propertyWidth = parseFloat( $(this).find(".property-width").html() ),  
 				propertyHeight = parseFloat( $(this).find(".property-height").html() );
 		}
 		
 		//дополнительная переменная - штучный товар
-		var propertyPieceGood = $(this).find(".property-piece-goods").html().toUpperCase();
+		let propertyPieceGood = $(this).find(".property-piece-goods").html().toUpperCase();
 		if (propertyPieceGood === "ДА") { propertyPieceGood = true }
 			else {	propertyPieceGood = false }
 		
@@ -194,7 +192,7 @@ webSettings.set_handler(function() {
 		else{
 			//прятать калькулятор, если товар штучный
 			$("#price_calc").hide();
-			$(this).find(".variant-squere").hide();
+			$(this).find(".letiant-squere").hide();
 		}
 		
 		

@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	//Корзина 
 webSettings.set_handler(function() { 
-	var totalWeight = 0; //суммарный вес
-	var totalSquere = 0; //суммарная площадь
-	var totalSpace = 0; //суммарный объем
+	let totalWeight = 0; //суммарный вес
+	let totalSquere = 0; //суммарная площадь
+	let totalSpace = 0; //суммарный объем
 	
 	$("#purchases .cart-row").each(function(){
 		let cartRow = $(this);

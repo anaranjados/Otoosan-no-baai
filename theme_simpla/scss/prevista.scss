@@ -212,14 +212,17 @@ nav#top {	// mostly top horizontal menu
 	#IMAGINES {		// column of big+small images
 		position: relative;
 		width: 57%;
-		.by_order { margin: .5rem }
+        #zw_productssearch_v2 {
+            margin: 1rem .5rem;
+            div.by_order { margin: 1rem 1rem -4rem }
+        }
 		div.image {		// big image
 			text-align: center;
 			width: 100%;
 			min-width: 370px;
 			line-height: 366px;
 			border: 1px solid #ccc;
-			margin: -3rem 0 10px;
+			margin-bottom: 10px;
 			img { vertical-align: middle }
 			&s img {		// small images
 				position: absolute;
@@ -1412,10 +1415,13 @@ div.nofooter { padding-bottom: 2rem!important }	// overwrite compress.asx/zw_all
 		ul {
 			padding-left: 0;
 			list-style: none;
-			&:nth-child(2) li {
+			/*
+            &:not(:nth-child(3)) li,
+            &:not(:nth-child(4)) li {
 				&:nth-child(6), &:nth-child(9), &:nth-child(16) {
 					padding-bottom: 15px	}		// Разделитель групп каталога
 			}
+            */
 			li {
 				font-size: 15px!important;
 				margin-top: 5px;
@@ -1508,7 +1514,7 @@ div.nofooter { padding-bottom: 2rem!important }	// overwrite compress.asx/zw_all
 @media (max-width:1020px) { // mobile
 	#top { position: initial }	// mostly high menu
 	#description { left: 20vw }	// slogan in header
-	aside, .desktop, .dg-container, #btn_callback, #phone, #contact {	// левая колонка, 3д слайдер, кнопка "заказ звонка", телефон и адрес в шапке
+	aside, .dg-container, #btn_callback, #phone, #contact, .footer__expanded, hr.l_horiz_line:nth-child(3), .desktop, {	// левая колонка, 3д слайдер, кнопка "заказ звонка", телефон и адрес в шапке
 		display: none !important
 	}
 	#ccphworkarea {

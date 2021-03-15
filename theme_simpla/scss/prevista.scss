@@ -2,6 +2,7 @@
 @font-face { font-family: lobster; src: url('/f/cb2d8212-bd4a-11e6-940b-d8cb8ac3bb52/') }
 
 $theme_bg-color: coral;
+$theme_green: #6fa296;
 
 body {	font: 13px Segoe, sans-serif;  color: #202020; margin: 0; font-weight: normal  }
 p {	margin-bottom: 10px }
@@ -173,14 +174,25 @@ nav#top {	// mostly top horizontal menu
 	margin: 0 auto;
 	width: 90%;   // +min-width: 880px
 }
-.home #is {	// lara - это
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
-	article.b {
-		padding: 8px 40px;
-		text-align: center;
+.home {
+	#is {	// lara - это
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		article.b {
+			padding: 8px 25px;
+			text-align: center;
+		}
 	}
+	nav.home-blocks {	// вариации каталога плитками на главной
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		a { padding: 0px 25px 10px 0;
+			p { margin: 0 }
+			div { text-align: center }
+		}
+   }
 }
 
 #ccphworkarea {
@@ -191,15 +203,6 @@ nav#top {	// mostly top horizontal menu
 		max-width: 100% !important;
 		padding-left: 0 !important
 	}
-    nav.home-blocks {	// вариации каталога плитками на главной
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        a { padding: 0px 25px 10px 0;
-           p { margin: 0 }
-           div { text-align: center }
-        }
-    }
 	#path {		// хлебные крошки
 		margin: 0 0 15px;
 		font-size: 11px;
@@ -208,14 +211,15 @@ nav#top {	// mostly top horizontal menu
 		a {	color: #606060	}
 	}
 }
+
 .uno {	// productPage
 	#IMAGINES {		// column of big+small images
-		position: relative;
 		width: 57%;
-        #zw_productssearch_v2 {
-            margin: 1rem .5rem;
-            div.by_order { margin: 1rem 1rem -4rem }
-        }
+      #zw_productssearch_v2 {
+         margin: 1rem .5rem;
+			position: relative;
+         div.by_order { margin: 1rem 1rem -4rem }
+      }
 		div.image {		// big image
 			text-align: center;
 			width: 100%;
@@ -224,7 +228,7 @@ nav#top {	// mostly top horizontal menu
 			border: 1px solid #ccc;
 			margin-bottom: 10px;
 			img { vertical-align: middle }
-			&s img {		// small images
+			&s img {			// small images
 				position: absolute;
 				width: 120px;
 				top: 0;
@@ -287,23 +291,68 @@ nav#top {	// mostly top horizontal menu
 				.store-quantity, .store-squere { font-size: 15px }
 			}
 			.add_to_cart {
-				color: green;
+				color: $theme_green;
 				display: inline-block;
 				vertical-align: middle;
-				border: 1px dashed green;
+				border: 1px dashed $theme_green;
 				border-radius: 0 1rem 0 1rem;
 				padding: .1rem 0.5rem;
 				&:hover {
-					font-size: inherit;
-					color: brown;
+					color: $theme_bg-color;
 					text-decoration: none;
-					border-color: $theme_bg-color;
-					transition: all 1s ease-out
+					transition: color 1s ease-out
 				}
 				i { transform: rotate(-10deg) }
 				em { vertical-align: super }
 				&_process {	color: black; 	vertical-align: top }
 			}
+		}
+	}
+	// add to cart notification banner
+	#notify, #shaded { position:fixed }
+	#shaded {
+		background-color:rgba(100,56,56,.25);
+		width:100vw;
+		height:100vh;
+		top:0;
+		left:0;
+		z-index:3
+	}
+	#notify {
+		background-color:rgba(255,127,80,.85);
+		padding:3rem 0;
+		z-index: 4;
+		text-align:center;
+		top:33%;
+		left:28%;
+		right:28%;
+		border-radius: 3.5rem 0;
+		big {
+			font-family: 'Courier New', Courier, monospace;
+			font-size: large;
+			font-weight: bold;
+			letter-spacing: .1rem;
+			color:chartreuse;
+			user-select: none
+		}
+		section { margin-top:1rem }
+		i, button { cursor:pointer }
+		i.fa {
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			padding: .5rem;
+			color: #fff8dc
+		}
+		button {
+			padding: .5rem;
+			margin: 0 .8rem;
+			border-radius: .3rem;
+			border-width: 0;
+			width: 10rem;
+			letter-spacing: .05rem;
+			&:first-of-type { background-color: #fff8dc }
+			&:last-of-type { background-color: aqua }
 		}
 	}
 }
@@ -322,7 +371,7 @@ nav#top {	// mostly top horizontal menu
 	}
 }
 
-.tiny_products {	// appears on home & catalog
+.tiny_products {	// appears on home / catalog / search
 	list-style: none;
 	display: block;
 	min-width: 733px;
@@ -403,6 +452,7 @@ nav#top {	// mostly top horizontal menu
 	}
 }
 
+/*
 #features { 						// filter Page
 	border-top: 1px dashed #d0d0d0;
 	border-bottom: 1px dashed #d0d0d0;
@@ -455,6 +505,7 @@ nav#top {	// mostly top horizontal menu
 		margin-right: 5px
 	}
 }
+*/
 
 tr.store-row .add_amount,	
 #price_calc #m2,
@@ -527,6 +578,7 @@ textarea {
 		border: 1px solid #666
 	}
 }
+/*
 .form {
 	width: 360px;
 	margin-bottom: 20px;
@@ -541,10 +593,10 @@ textarea {
 	input[type="password"],
 	select {
 		display: block;
-		margin-bottom: 10px
+		margin-bottom: 1
 	}
 }
-
+*/
 .theme-default div#slider {	// collections _ nivoSlider
 	width: 620px;
 	height: 410px;
@@ -786,10 +838,8 @@ ul#list_in_cart {
 		position: relative;
 		z-index: 1
 	}
-	&-button-left-wrapper:hover,
-	&-img-prev,
-	&-button-right-wrapper:hover,
-	&-img-next {
+	&-button-left-wrapper:hover &-img-prev,
+	&-button-right-wrapper:hover &-img-next {
 		display: block
 	}
 	&-button-left-wrapper,
@@ -821,7 +871,6 @@ ul#list_in_cart {
 }
 
 .error { color: red!important }
-// [type="button"] {	cursor: pointer }
 
 input[type="text"].error,
 input[type="password"].error,
@@ -1297,7 +1346,7 @@ table.order_info {
 }
 
 .message_error { color: purple } 	// "zetaweb controls" message
-	
+
 footer#ccphbottom {
 	position: initial!important;	// overwrite  compress.asx/zw_all...css
 	.fa-2x { transform: rotate(5deg) }
@@ -1514,7 +1563,7 @@ div.nofooter { padding-bottom: 2rem!important }	// overwrite compress.asx/zw_all
 @media (max-width:1020px) { // mobile
 	#top { position: initial }	// mostly high menu
 	#description { left: 20vw }	// slogan in header
-	aside, .dg-container, #btn_callback, #phone, #contact, .footer__expanded, hr.l_horiz_line:nth-child(3), .desktop, {	// левая колонка, 3д слайдер, кнопка "заказ звонка", телефон и адрес в шапке
+	aside, .dg-container, #btn_callback, #phone/*, #contact*/, .footer__expanded, hr.l_horiz_line:nth-child(3), .desktop {	// левая колонка, 3д слайдер, кнопка "заказ звонка", телефон / адрес в шапке, подвал Лианы, черта перед подвалом
 		display: none !important
 	}
 	#ccphworkarea {

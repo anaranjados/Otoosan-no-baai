@@ -28,6 +28,12 @@
 .fa-phone:before {
   content: "\f095";
 }
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-search:before {
+  content: "\f002";
+}
 .fa-instagram:before {
   content: "\f16d";
 }
@@ -93,9 +99,6 @@
   filter: none;
 }
 
-.fa-search:before {
-  content: "\f002";
-}
 @font-face {
   font-family: 'FontAwesome';
   src: url('/f/3d0ca338-f38b-11e6-94fa-00155d15e314/');

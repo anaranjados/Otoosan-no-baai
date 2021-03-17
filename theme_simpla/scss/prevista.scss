@@ -222,20 +222,25 @@ nav#top {	// mostly top horizontal menu
       }
 		div.image {		// big image
 			text-align: center;
-			width: 100%;
+			width: 99.7%;
 			min-width: 370px;
 			line-height: 366px;
 			border: 1px solid #ccc;
-			margin-bottom: 10px;
 			img { vertical-align: middle }
-			&s img {			// small images
-				position: absolute;
-				width: 120px;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				margin: auto
+			&s {			// small images wrapper
+				display: flex;
+				justify-content: center;
+				flex-flow: wrap;
+				padding: 10px 0;
+				img {			
+					position: absolute;
+					width: 120px;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto
+				}
 			}
 		}
 	}
@@ -278,8 +283,8 @@ nav#top {	// mostly top horizontal menu
 				.calc-button {
 					display: block;
 					margin-top: 20px;
-					background: #e51b24;
-					color: #fff;
+					background: aquamarine;
+					color: grey;
 					font-size: 16px;
 					font-family: Segoe, sans-serif;
 					padding: 5px 30px;
@@ -1449,7 +1454,7 @@ footer#ccphbottom {
 div.nofooter { padding-bottom: 2rem!important }	// overwrite compress.asx/zw_all...css
 
 ::-webkit-scrollbar {	width: .8em; height: .8em }
-::-webkit-scrollbar-track {	background-color: rgba(255,97,17,0.3); border-radius: 2px }
+::-webkit-scrollbar-track {	background-color: rgba(255,97,17,0.3); border-radius: 2px }	// coral, semi-visible
 ::-webkit-scrollbar-thumb {	background-color: aquamarine; border-radius: 2px }
 	html { scrollbar-width: thin;	scrollbar-color: aquamarine rgba(255,97,17,0.3) }
 

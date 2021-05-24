@@ -1,0 +1,68 @@
+{ "todo":[
+   { "slides": [
+         "/i/pietra-1-1.jpg",
+         "/i/pietra-2.jpg",
+         "/i/pietra-3.jpg"
+      ],
+      "name": ["Типовой проект", "Душевой"],
+      "tips": [
+         ["встроенный душ", "трап, лейка, смеситель", "раковина, зеркало, унитаз"],
+         ["стиральная машина"]
+      ],
+      "artic": [
+         [
+            "/uno/catalog/product/nastennaya-plitka-biselado-blanco-brillo-10x20-dar-ceramics",
+            "nastennaya-plitka-biselado-blanco-brillo-10x20-dar-ceramics.jpg",
+            "Кабанчик белый"
+         ],
+         [
+            "/uno/catalog/product/nastennaya-plitka-biselado-negro-brillo-10x20-dar-ceramics",
+            "nastennaya-plitka-biselado-negro-brillo-10x20-dar-ceramics.jpg",
+            "Кабанчик черный"
+         ],
+         [
+            "/uno/catalog/product/nastennaya-plitka-biselado-pistacho-brillo-10x20-dar-ceramics",
+            "nastennaya-plitka-biselado-pistacho-brillo-10x20-dar-ceramics.jpg",
+            "Кабанчик фисташковый"
+         ]
+      ],
+      "price-m2": {
+         "reves": 1500,
+         "pavim": 2500
+      }
+   },
+
+
+   { "slides": [
+         "/i/alguna-1-1.jpg",
+         "/i/pietra-2.jpg",
+         "/i/pietra-3.jpg"
+      ],
+      "name": ["Гостиная", "под дерево"],
+      "tips": [
+         ["электрический камин", "два шезлонга", "журнальный столик"],
+         ["панорамное остекление", "помещение 15 м2"]
+      ],
+      "artic": [
+            [
+               "/uno/catalog/product/nastennaya-plitka-elder-negro-45x90",
+               "nastennaya-plitka-elder-negro-45x90.jpg",
+               "Elder negro"
+            ],
+            [
+               "/uno/catalog/product/nastennaya-plitka-elder-gris-45x90",
+               "nastennaya-plitka-elder-gris-45x90.jpg",
+               "Elder gris"
+            ],
+            [
+               "/uno/catalog/product/nastennaya-plitka-elder-blanco-45x90",
+               "nastennaya-plitka-elder-blanco-45x90.jpg",
+               "Elder blanco"
+            ]
+         ],
+      "price-m2": {
+         "reves": 3000,
+         "pavim": 4000
+      }
+   }
+]}

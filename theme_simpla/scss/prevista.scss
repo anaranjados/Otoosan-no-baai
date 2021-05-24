@@ -3,6 +3,8 @@
 
 $theme_bg-color: coral;
 $theme_green: #6fa296;
+$raskl_usedMerchColor: #915bc3;
+$raskl_firstLetterColor: #ce432c;
 
 body {	font: 13px Segoe, sans-serif;  color: #202020; margin: 0; font-weight: normal  }
 p {	margin-bottom: 10px }
@@ -226,7 +228,11 @@ nav#top {	// mostly top horizontal menu
 			min-width: 370px;
 			line-height: 366px;
 			border: 1px solid #ccc;
-			img { vertical-align: middle }
+			img {
+            vertical-align: middle;
+            max-height: 370px;
+            max-width: 370px
+         }
 			&s {			// small images wrapper
 				display: flex;
 				justify-content: center;
@@ -389,6 +395,10 @@ nav#top {	// mostly top horizontal menu
 		word-spacing: normal;
 		vertical-align: top;
 		margin-top: 5px;
+      .image img {
+         max-width: 200px;
+         max-height: 200px;
+      }
 	}
 	.by_order {			// метка товара: новинка, под заказ и пр.
 		position: absolute;
@@ -1458,7 +1468,159 @@ div.nofooter { padding-bottom: 2rem!important }	// overwrite compress.asx/zw_all
 ::-webkit-scrollbar-thumb {	background-color: aquamarine; border-radius: 2px }
 	html { scrollbar-width: thin;	scrollbar-color: aquamarine rgba(255,97,17,0.3) }
 
-@media (min-width:1025px) { 	//desktop
+// --raskladka 3d--
+.public-3d {
+   max-width: 100% !important;
+   display: block !important;
+   padding-left: 0 !important;
+   article {
+      display: flex;
+      margin: 0 5rem;
+      &:not(:last-of-type) { border-bottom: 4px dashed #1968bc7d }
+      padding: 1rem 0;
+      aside {
+         width: 53%;
+         margin: auto;
+         padding-right: 3rem;
+         padding-left: 1rem;
+         div.slick-list { border-radius: 2rem }
+      }
+      form {
+         display: flow-root;
+         align-self: center;
+         width: 47%;
+         * { font-family: 'Pangolin', cursive; letter-spacing: .05rem }
+         h2 {
+            font-family: 'Pacifico', cursive;
+            line-height: 1rem;
+            input {
+               font-family: 'Pacifico', cursive;
+               color: #64a402;
+               font-size: inherit;
+               width: 200px;
+               border: 0;
+               outline: none
+            }
+         }
+         .flex {
+            display: flex;
+            flex-wrap: wrap;
+            ul {
+               margin: 0;
+               padding-left: 0;
+               :not( :last-of-type ) { padding-right: 2rem }
+               li {
+                  list-style: none;
+                  span {
+                     opacity: 0.35;
+                     font-size: 1.2rem;
+                     margin-right: .3rem
+                  }
+               }
+            }
+         }
+         h4 {
+            text-align: right;
+            margin-bottom: 0;
+            &::first-letter { color: $raskl_firstLetterColor }
+         }
+         .applied-merch {
+            a {
+               text-align: center;
+               text-decoration: none;
+               color: initial;
+               max-width: min-content;
+               min-width: 4rem;
+               padding: .5rem;
+               &:hover {
+                  border: 1px dashed rgba(50,50,50,0.5);
+                  border-radius: 0.5rem;
+               }
+               &:not( :last-of-type ) {
+                  margin-right: 1rem
+               }
+               img {
+                  max-width: 3rem;
+                  height: 2.7rem;
+                  margin-bottom: 0.3rem;
+                  border-radius: 0.5rem;
+               }
+               span {
+                  font-style: italic;
+                  font-family: 'Pacifico', cursive;
+                  line-height: 1rem;
+                  color: $raskl_usedMerchColor;
+               }
+            }
+         }
+         .calcul {
+            label small, output {
+               vertical-align: super;
+               user-select: none;
+            }
+            > small {
+               font-size: initial;
+               margin-left: 75%;
+            }
+            [type=range] {
+               margin: 0 .4rem 0 .8rem;
+            }
+         }
+         .order {
+            text-align: center;
+            justify-content: center;
+            h3 {
+               font-size: medium;
+               margin-bottom: 1rem;
+               span {                  // padding-left: 2rem;    // font-style: italic;
+                  font-size: x-small;
+                  font-weight: normal;
+                  span { color: $raskl_firstLetterColor; font-size: small }
+               }
+            }
+            .hide { display: none }
+            label {
+               display: inline-flex;
+               user-select: none;
+               margin-bottom: 5px;
+               width: 100%;
+               span {
+                  width: 10rem;
+                  padding-right: 1rem;
+                  &::first-letter {
+                     color: $raskl_firstLetterColor;
+                     font-weight: 900;
+                     font-size: 1.15rem;
+                  }
+               }
+               &:nth-of-type(1) input { width: 7rem }
+               &:nth-of-type(2) input { width: 12rem }
+               &:nth-of-type(3) input { width: 17rem }
+               input {
+                  border-color: grey;
+                  border-width: 1px;
+                  border-style: dashed;
+                  padding-left: 3px;
+                  outline: none
+               }
+            }
+            [type=submit] {
+               background-color: $raskl_firstLetterColor;
+               border: 0;
+               margin: 1rem auto;
+               padding: 5px 25px;
+               border-radius: 0 1rem;
+               width: initial;
+               color: whitesmoke;
+            }
+         }
+      }
+   }
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Pangolin&display=swap');
+// --end raskladka 3d--
+
+@media (min-device-width:1021px) { 	//desktop
  aside#ccphleft {
 	width: 15vw;
 	float: none;
@@ -1556,23 +1718,84 @@ div.nofooter { padding-bottom: 2rem!important }	// overwrite compress.asx/zw_all
 	}
  }
 
- #ccphworkarea {
-	padding-left: 40px;
-	&.home { padding-left: 24px }	// home page
- }
+   #ccphworkarea {
+   padding-left: 40px;
+   &.home { padding-left: 24px }	// home page
+   }
 
- .mobile { display: none !important }
- #top { position: fixed }
+   .mobile { display: none !important }
+   #top { position: fixed }
+
+   .public-3d input[type=number] { display: none }
 }
 
-@media (max-width:1020px) { // mobile
-	#top { position: initial }	// mostly high menu
-	#description { left: 20vw }	// slogan in header
+@media (max-device-width: 1020px) {    // mobile
+	#top { position: initial }	         // most top menu
+	#description { left: 20vw }	      // slogan in header
 	aside, .dg-container, #btn_callback, #phone/*, #contact*/, .footer__expanded, hr.l_horiz_line:nth-child(3), .desktop {	// левая колонка, 3д слайдер, кнопка "заказ звонка", телефон / адрес в шапке, подвал Лианы, черта перед подвалом
 		display: none !important
 	}
 	#ccphworkarea {
         max-width: 90vw;
         nav.home-blocks a { padding: 10px 0 5px }
-    }
+   }
+   .public-3d article {
+      font-size: 3vw;
+      display: block;
+      margin: 0 2rem;
+      aside { padding: 0 }
+      form {
+         width: initial;
+         h2 {
+            margin-bottom: 5px;
+            text-align: center;
+         }
+         .flex {
+            justify-content: center;
+            img {
+               max-width: 6rem !important;
+               height: 5rem !important
+            }
+         }
+         .calcul {
+            label {
+               display: flex;
+               justify-content: center;
+               * { height: 3rem }
+            }
+            input[type=number] {
+               font-size: 1.5rem;
+               margin-left: 1rem;
+               width: 6rem;
+               border: 3px dotted gray;
+            }
+            input[type=range], output {
+               display: none
+            }
+            & > small { font-size: inherit }
+         }
+         .order {
+            h3 {
+               font-size: xx-large !important;
+               span { font-size: x-large !important}
+            }
+            label {
+               width: initial;
+               span::first-letter { font-size: xx-large }
+               &:nth-of-type(1) input { width: 23rem !important }
+               &:nth-of-type(2) input { width: 28rem !important }
+               &:nth-of-type(3) input { width: 32rem !important }
+               input {
+                  border-width: 3px;
+                  font-size: 2rem;
+               }
+            }
+            [type=submit] {
+               padding: 10px 30px;
+               font-size: 2rem;
+               width: 40%;
+            }
+         }
+      }
+   }
 }

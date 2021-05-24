@@ -1,0 +1,92 @@
+<!doctype html><html><head>
+<title>3D предложения</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="f/slick.css">
+<script defer src="f/jquery-1.11.0.min.js"></script>
+<script defer src="f/jquery-migrate-1.2.1.min.js"></script>
+<script defer src="f/slick.min.js"></script>
+
+<script defer src="f/form-open.js"></script>
+<link rel="stylesheet" href="f/raskladka.min.css">
+</head><body class="public-3d">
+
+<article>
+   <aside class="fade">
+      <img src="i/larasalon-1.jpg" alt="торговый зал">
+      <video muted autoplay>
+         <source src="i/lara_promo.mp4" type="video/mp4">
+         <source src="i/lara_promo.webm" type="video/webm">
+      </video>
+      <img src="i/larasalon-2.jpg" alt="торговый зал">
+      <img src="i/larasalon-3.jpg" alt="торговый зал">
+      <img src="i/larasalon-4.jpg" alt="торговый зал">
+   </aside>
+   <section>
+      <form action="https://formspree.io/f/mknkwzor" method="POST" enctype="multipart/form-data">
+         <h2>Типовой проект <input value="Душевой" readonly name="proyect" type="text"></h2>
+         <div class="flex">
+            <ul>
+               <li><span>✔️</span>душ, обложенный плиткой</li>
+               <li><span>✔️</span>трап, смеситель, лейка</li>
+               <li><span>✔️</span>раковина, унитаз</li>
+            </ul>
+            <ul>
+               <li><span>✔️</span>стиральная машина</li>
+               <li><span>✔️</span>стеклянная перегородка</li>
+            </ul>
+         </div>
+         <h4>Примененные товары</h4>
+         <div class="applied-merch flex">
+            <a href="">
+               <img src="i/candela-1.jpg" alt="biselado negro">
+               <span>Кабанчик черный</span>
+            </a>
+            <a href="">
+               <img src="i/interior_1.jpg" alt="interior biselado">
+               <span>Кабанчик бежевый</span>
+            </a>
+            <a href="">
+               <img src="i/candela-2.jpg" alt="pistacho 10x20">
+               <span>Кабанчик фисташковый</span>
+            </a>
+         </div>
+         <h4>Стоимость плитки</h4>
+         <div class="calcul">
+            <label>
+               <small>Площадь стен</small>
+               <input type="range" name="stena-m2" min="1" max="15" value="24" step="0.5" price_m2_stena="1500">
+               <input type="number" name="duplic__stena-m2" min="1" step="0.5" placeholder="м²">
+               <output>24<span>&nbsp;м²</span></output>
+            </label>
+            <br>
+            <label>
+               <small>Площадь пола</small>
+               <input type="range" name="pol-m2" min="1" max="20" value="8" step="0.5" price_m2_pol="2500">
+               <input type="number" name="duplic__pol-m2" min="1" step="0.5" placeholder="м²">
+               <output>8<span>&nbsp;м²</span></output>
+            </label>
+            <br>
+            <small></small>
+         </div>
+         <div class="order flex">
+            <h3>Дизайн-решение<span>&emsp;<span>С</span>юда!<br>Смета количества-стоимости товаров, а также 3D-визуализация в шоу-руме</span></h3>
+            <label>
+               <span>Телефон</span>
+               <input type="tel" required class="cstm-inp" name="Телефон клиента" placeholder="+7">
+            </label>
+            <label class="hide">
+               <span>Имя</span>
+               <input type="text" class="cstm-inp" name="Клиент" placeholder="Меня зовут">
+            </label>
+            <label class="hide">
+               <span>Ссылка на чертёж</span><br>
+               <input type="text" required class="cstm-inp" name="Чертёж" placeholder="//гиперссылка"></textarea>
+            </label>
+            <input type="submit" class="hide" value="Запросить">
+         </div>
+      </form>
+   </section>
+</article>
+
+
+</body></html>
